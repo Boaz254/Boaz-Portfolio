@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boaz Mittoh </title>
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+      <!-- Font Awesome for Icons -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+      <!-- Custom CSS -->
+      <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+
+.menu-btn {
+    position: fixed;
+    top: 15px;
+    left: 20px;
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+    </style>
+</head>
+<body>
+    <button id="menu-toggle" class="menu-btn">☰</button>
+
+    <div class="sidebar">
+        
+        <div class="sidebar-heading">
+            <div class="profile-image-container">
+                <img src="{{ url_for('static', filename='images/boaz.jpg') }}" alt="Boaz Mittoh" class="profile-image">
+                <h2 class="profile-name">Boaz Mittoh</h2>
+                <p class="profile-title">Full Stack Developer</p>
+            </div>
+        </div>
+        
+        <nav class="sidebar-nav">
+            <a href="#about" class="nav-link">
+                <i class="fas fa-user-circle about-icon"></i>
+                <span class="link-text">About</span>
+            </a>
+            <a href="#services" class="nav-link">
+                <i class="fas fa-briefcase services-icon"></i>
+                <span class="link-text">Services</span>
+            </a>
+            <a href="#projects" class="nav-link">
+                <i class="fas fa-folder-open projects-icon"></i>
+                <span class="link-text">Projects</span>
+            </a>
+            <a href="#contact" class="nav-link">
+                <i class="fas fa-envelope contact-ico"></i>
+                <span class="link-text">Contact</span>
+            </a>
+        </nav>
+        
+        <div class="sidebar-footer">
+            <div class="social-links">
+                <a href="https://github.com/yourprofile" target="_blank" class="social-link" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/boaz-mittoh-136062218" target="_blank" class="social-link" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="mailto:boazmittoh480@gmail.com" target="_blank" class="social-link" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="tel:+1234567890" class="social-link" aria-label="Phone">
+                    <i class="fas fa-phone"></i>
+                </a>
+            </div>
+            
+            
+            <div class="legal-links">
+                <a href="{{ url_for('terms') }}">Terms of Service</a>
+                
+            </div>
+            
+            <p class="inspirational-quote">"Hard work beats talent when talent fails to work hard!"</p>
+            
+            <p class="copyright">&copy; <span id="current-year">2025</span> Boaz Mittoh. All rights reserved.</p>
+        </div>
+    </div>
+        
+    <section class="hero-section">
+        <div class="video-overlay"></div>
+        <video autoplay muted loop playsinline class="background-video">
+            <source src="{{ url_for('static', filename='videos/hero.mp4') }}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="greeting">👋 Hello!</span>
+                    <span class="name">I'm Boaz Mittoh</span>
+                </h1>
+                <div class="typewriter-container">
+                    <p class="hero-subtitle">Web Developer | Data Analyst | Tax Administrator</p>
+                </div>
+                <div class="hero-buttons">
+                    <a href="#about" class="btn btn-primary">
+                        <span>Learn More About Me</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <span>Get In Touch</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <div class="content">
+
+        
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">About <span class="highlight">Me</span></h2>
+                    <div class="section-divider"></div>
+                    <p class="section-subtitle">Get to know me better</p>
+                </div>
+                
+                <div class="about-content">
+                    
+                    <div class="about-image">
+                        <div class="image-wrapper">
+                            <img src="{{ url_for('static', filename='images/boaz.jpg') }}" alt="Boaz Mittoh" class="profile-img">
+                            <div class="image-border"></div>
+                        </div>
+                    </div>
+                    
+                   
+                    <div class="about-text">
+                        <div class="about-intro">
+                            <p class="intro-text">I'm a passionate <span class="highlight">Business Information Technology</span> graduate specializing in web development and data analysis.</p>
+                        </div>
+                        
+                        <div class="about-details">
+                            <div class="detail-item">
+                                <i class="fas fa-user-graduate detail-icon"></i>
+                                <div>
+                                    <h4>Education</h4>
+                                    <p>BBIT Graduate with honors</p>
+                                </div>
+                            </div>
+                            
+                            <div class="detail-item">
+                                <i class="fas fa-briefcase detail-icon"></i>
+                                <div>
+                                    <h4>Experience</h4>
+                                    <p>2+ years in IT industry</p>
+                                </div>
+                            </div>
+                            
+                            <div class="detail-item">
+                                <i class="fas fa-code detail-icon"></i>
+                                <div>
+                                    <h4>Specialization</h4>
+                                    <p>Full Stack Development</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="about-description">
+                            <p>I specialize in creating user-friendly websites using modern technologies, with certification in Web Development ensuring industry-standard results. My expertise spans both front-end and back-end development.</p>
+                            <p>With experience in Network Administration, Data Analysis, and Tax Administration, I bring a diverse skill set to solve business challenges and enhance customer engagement.</p>
+                        </div>
+                        
+                        
+                        <div class="action-buttons">
+                            <a href="{{ url_for('static', filename='files/Boaz O. Mito Cv.pdf') }}" class="btn0 btn-download" download>
+                                <i class="fas fa-download"></i> Download CV
+                            </a>
+                            <a href="#contact" class="btn0 btn-contact">
+                                <i class="fas fa-paper-plane"></i> Contact Me
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="skills" class="skills-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">My <span class="highlight">Skills</span></h2>
+                    <div class="section-divider"></div>
+                    <p class="section-subtitle">Technologies I work with</p>
+                </div>
+                
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3 class="category-title">
+                            <i class="fas fa-laptop-code category-icon"></i>
+                            Web Development
+                        </h3>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>HTML/CSS</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 95%; background-color: #e44d26;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>JavaScript</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 85%; background-color: #f0db4f;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Python/Flask</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 90%; background-color: #3776ab;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3 class="category-title">
+                            <i class="fas fa-database category-icon"></i>
+                            Data Management
+                        </h3>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>MySQL</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 85%; background-color: #4479a1;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Data Analysis</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 80%; background-color: #2ecc71;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Excel</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 90%; background-color: #217346;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3 class="category-title">
+                            <i class="fas fa-network-wired category-icon"></i>
+                            IT Infrastructure
+                        </h3>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Network Administration</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 95%; background-color: #3498db;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>System Troubleshooting</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 90%; background-color: #9b59b6;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>CRM Systems</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 85%; background-color: #e74c3c;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <section id="projects" class="projects-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Featured <span class="highlight">Projects</span></h2>
+                    <div class="section-divider"></div>
+                    <p class="section-subtitle">Explore my recent work</p>
+                </div>
+                
+                <div class="projects-grid">
+                    
+                    <div class="project-card">
+                        <div class="project-icon food-icon">
+                            <i class="fas fa-store"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Online Food Store</h3>
+                            <p class="project-description">A full-featured e-commerce platform with user authentication, shopping cart functionality, and M-Pesa payment integration.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Flask</span>
+                                <span class="tech-tag">MySQL</span>
+                                <span class="tech-tag">M-Pesa API</span>
+                            </div>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://your-foodstore-link.com" target="_blank" class="btn btn-primary">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="#" class="btn btn-secondary">
+                                <i class="fas fa-code"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                    
+                   
+                    <div class="project-card">
+                        <div class="project-icon fish-icon">
+                            <i class="fas fa-fish"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">SmartFish E-commerce</h3>
+                            <p class="project-description">Specialized marketplace for fish products with vendor management, product listings, and admin dashboard.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Bootstrap</span>
+                            </div>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://your-smartfish-link.com" target="_blank" class="btn btn-primary">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="#" class="btn btn-secondary">
+                                <i class="fas fa-code"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="project-card">
+                        <div class="project-icon school-icon">
+                            <i class="fas fa-school"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">XYZ School Management System</h3>
+                            <p class="project-description">Comprehensive solution for school administration including student records, attendance, and reporting.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Flask</span>
+                                <span class="tech-tag">SQLAlchemy</span>
+                                <span class="tech-tag">Chart.js</span>
+                            </div>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://your-school-link.com" target="_blank" class="btn btn-primary">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="#" class="btn btn-secondary">
+                                <i class="fas fa-code"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="project-card">
+                        <div class="project-icon club-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Modern Club Management System</h3>
+                            <p class="project-description">Digital platform for managing club memberships, events, finances, and communications.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">HTML/CSS</span>
+                                <span class="tech-tag">Stripe API</span>
+                            </div>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://your-clubms-link.com" target="_blank" class="btn btn-primary">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="#" class="btn btn-secondary">
+                                <i class="fas fa-code"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="load-more-container">
+                    <button id="load-more" class="load-more-btn">
+                        <span>Load More Projects</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="services-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Professional <span class="highlight">Services</span></h2>
+                    <div class="section-divider"></div>
+                    <p class="section-subtitle">Comprehensive solutions tailored to your needs</p>
+                </div>
+        
+                <div class="services-grid">
+                    
+                    <div class="service-card">
+                        <div class="service-icon tax-icon">
+                            <i class="fas fa-balance-scale"></i>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">Tax Administration</h3>
+                            <p class="service-description">Expert handling of taxation processes with meticulous accuracy and full regulatory compliance.</p>
+                            <ul class="service-features">
+                                <li>Tax filing & compliance</li>
+                                <li>Financial reporting</li>
+                                <li>Regulatory documentation</li>
+                            </ul>
+                        </div>
+                        <div class="service-action">
+                            <a href="{{ url_for('service', service_name='tax-administration') }}" class="btn btn-service">
+                                <i class="fas fa-arrow-right"></i> Learn More
+                            </a>
+                        </div>
+                    </div>
+        
+                    
+                    <div class="service-card">
+                        <div class="service-icon network-icon">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">Network Administration</h3>
+                            <p class="service-description">Comprehensive configuration, maintenance, and optimization of LAN/WAN networks.</p>
+                            <ul class="service-features">
+                                <li>Network setup & configuration</li>
+                                <li>Security implementation</li>
+                                <li>Performance optimization</li>
+                            </ul>
+                        </div>
+                        <div class="service-action">
+                            <a href="{{ url_for('service', service_name='network-administration') }}" class="btn btn-service">
+                                <i class="fas fa-arrow-right"></i> Learn More
+                            </a>
+                        </div>
+                    </div>
+        
+                    
+                    <div class="service-card">
+                        <div class="service-icon database-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">Database Administration</h3>
+                            <p class="service-description">Professional design, management, and optimization of MySQL database systems.</p>
+                            <ul class="service-features">
+                                <li>Database design & implementation</li>
+                                <li>Performance tuning</li>
+                                <li>Backup & recovery</li>
+                            </ul>
+                        </div>
+                        <div class="service-action">
+                            <a href="{{ url_for('service', service_name='database-administration') }}" class="btn btn-service">
+                                <i class="fas fa-arrow-right"></i> Learn More
+                            </a>
+                        </div>
+                    </div>
+        
+                    
+                    <div class="service-card">
+                        <div class="service-icon data-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">Data Analysis</h3>
+                            <p class="service-description">Actionable insights from data using advanced analysis tools and Python libraries.</p>
+                            <ul class="service-features">
+                                <li>Data visualization</li>
+                                <li>Statistical analysis</li>
+                                <li>Predictive modeling</li>
+                            </ul>
+                        </div>
+                        <div class="service-action">
+                            <a href="{{ url_for('service', service_name='data-analysis') }}" class="btn btn-service">
+                                <i class="fas fa-arrow-right"></i> Learn More
+                            </a>
+                        </div>
+                    </div>
+        
+                   
+                    <div class="service-card">
+                        <div class="service-icon web-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">Website Development</h3>
+                            <p class="service-description">Custom responsive websites designed for optimal user experience and performance.</p>
+                            <ul class="service-features">
+                                <li>Frontend & backend development</li>
+                                <li>Responsive design</li>
+                                <li>SEO optimization</li>
+                            </ul>
+                        </div>
+                        <div class="service-action">
+                            <a href="{{ url_for('service', service_name='web-development') }}" class="btn btn-service">
+                                <i class="fas fa-arrow-right"></i> Learn More
+                            </a>
+                        </div>
+                    </div>
+        
+                    
+                    <div class="service-card">
+                        <div class="service-icon software-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">Software Development</h3>
+                            <p class="service-description">Custom software solutions built for scalability, efficiency, and user satisfaction.</p>
+                            <ul class="service-features">
+                                <li>Custom application development</li>
+                                <li>System integration</li>
+                                <li>Maintenance & support</li>
+                            </ul>
+                        </div>
+                        <div class="service-action">
+                            <a href="{{ url_for('service', service_name='software-development') }}" class="btn btn-service">
+                                <i class="fas fa-arrow-right"></i> Learn More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="contact-overlay"></div>
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Get In <span class="highlight">Touch</span></h2>
+                    <div class="section-divider"></div>
+                    <p class="section-subtitle">I'd love to hear from you! Let's discuss how I can help with your project.</p>
+                </div>
+        
+                <div class="contact-container">
+                    
+                    <div class="contact-info">
+                        <div class="info-content">
+                            <h3 class="info-title">Contact Information</h3>
+                            <p class="info-description">Feel free to reach out through any of these channels. I typically respond within 24 hours.</p>
+                            
+                            <div class="contact-methods">
+                                <div class="contact-item">
+                                    <div class="contact-icon email-icon">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div class="contact-details">
+                                        <h4>Email</h4>
+                                        <a href="mailto:boazmittoh480@gmail.com">boazmittoh480@gmail.com</a>
+                                    </div>
+                                </div>
+                                
+                                <div class="contact-item">
+                                    <div class="contact-icon phone-icon">
+                                        <i class="fas fa-phone-alt"></i>
+                                    </div>
+                                    <div class="contact-details">
+                                        <h4>Phone</h4>
+                                        <a href="tel:+254701073857">+254 701 073857</a>
+                                    </div>
+                                </div>
+                                
+                                <div class="contact-item">
+                                    <div class="contact-icon location-icon">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <div class="contact-details">
+                                        <h4>Location</h4>
+                                        <p>Nairobi, Kenya</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="social-connect">
+                                <h4>Connect With Me</h4>
+                                <div class="social-links">
+                                    <a href="https://twitter.com/@boaz_mittoh" target="_blank" class="social-link twitter" aria-label="Twitter">
+                                        <i class="fab fa-x-twitter"></i>
+                                    </a>
+                                    <a href="https://wa.me/254701073857" target="_blank" class="social-link whatsapp" aria-label="WhatsApp">
+                                        <i class="fab fa-whatsapp"></i>
+                                    </a>
+                                    <a href="https://facebook.com/BoazMito" target="_blank" class="social-link facebook" aria-label="Facebook">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                    <a href="https://linkedin.com/in/boaz-mittoh-136062218" target="_blank" class="social-link linkedin" aria-label="LinkedIn">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </a>
+                                    <a href="https://github.com/yourprofile" target="_blank" class="social-link github" aria-label="GitHub">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                   
+                    <div class="contact-form">
+                        <h3 class="form-title">Send Me a Message</h3>
+                        
+                        
+                        <div class="flash-messages">
+                            {% with messages = get_flashed_messages(with_categories=true) %}
+                                {% if messages %}
+                                    {% for category, message in messages %}
+                                        <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+                                            {{ message }}
+                                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                        </div>
+                                    {% endfor %}
+                                {% endif %}
+                            {% endwith %}
+                        </div>
+                        
+                        <form action="/send_message" method="POST" class="message-form">
+                            <div class="form-group">
+                                <label for="name" class="form-label">Full Name <span class="required">*</span></label>
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
+                                <i class="fas fa-user form-icon"></i>
+                            </div>
+                    
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email Address <span class="required">*</span></label>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+                                <i class="fas fa-envelope form-icon"></i>
+                            </div>
+                    
+                            <div class="form-group">
+                                <label for="subject" class="form-label">Subject</label>
+                                <input type="text" class="form-control" id="subject" name="subject" placeholder="What's this about?">
+                                <i class="fas fa-tag form-icon"></i>
+                            </div>
+                    
+                            <div class="form-group">
+                                <label for="message" class="form-label">Message <span class="required">*</span></label>
+                                <textarea class="form-control" id="message" name="message" rows="5" placeholder="Your message here..." required></textarea>
+                                <i class="fas fa-comment form-icon"></i>
+                            </div>
+                    
+                            <button type="submit" class="btn1 submit-btn">
+                                <span>Send Message</span>
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+        </section>
+            
+        <footer class="footer bg-dark text-white py-3 " align="center">
+            <div class=" text-center">
+                <div class="footer-logo">
+                    <h4 class="mb-3">Boaz Mittoh</h4>
+                </div>
+                
+                <div class="footer-social mt-3">
+                    <a href="https://twitter.com/@boaz_mittoh" target="_blank" class="social-icon twitter"><i class="fab fa-x-twitter"></i></a>
+                    <a href="https://wa.me/0701073857" target="_blank" class="social-icon whatsapp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://facebook.com/BoazMito" target="_blank" class="social-icon facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="https://linkedin.com/in/boaz-mittoh-136062218" target="_blank" class="social-icon linkedin"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://instagram.com/boazmittoh" target="_blank" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+        
+                
+                <div class="footer-bottom mt-3">
+                    <p>&copy; 2025 Boaz Mittoh | All Rights Reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- Scripts -->
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menu-toggle');
+            const sidebar = document.querySelector('.sidebar');
+            const content = document.querySelector('.content');
+            const body = document.body;
+            const sidebarCloseBtn = document.querySelector('.sidebar-close-btn'); 
+            
+            // Toggle sidebar with menu button
+            menuToggle.addEventListener('click', function() {
+                sidebar.classList.toggle('active');
+                body.classList.toggle('sidebar-active');
+            });
+            
+            // Close sidebar with close button
+            if (sidebarCloseBtn) {
+                sidebarCloseBtn.addEventListener('click', function() {
+                    sidebar.classList.remove('active');
+                    body.classList.remove('sidebar-active');
+                });
+            }
+            
+            // Close sidebar when clicking on content
+            content.addEventListener('click', function() {
+                if (sidebar.classList.contains('active')) {
+                    sidebar.classList.remove('active');
+                    body.classList.remove('sidebar-active');
+                }
+            });
+    
+            // Update copyright year
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+        });
+    </script>
+
+</body>
+</html>
