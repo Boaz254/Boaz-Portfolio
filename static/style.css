@@ -1,9 +1,9 @@
 body.sidebar-open {
-    overflow: hidden; /* Prevent scrolling when sidebar is open */
+    overflow: hidden; 
 }
 
 .menu-btn {
-    display: none; /* Hidden by default on desktop */
+    display: none; 
     position: fixed;
     top: 15px;
     left: 20px;
@@ -12,7 +12,7 @@ body.sidebar-open {
     border: none;
     color: white;
     cursor: pointer;
-    z-index: 1100; /* Above sidebar */
+    z-index: 1100; 
     transition: all 0.3s ease;
 }
  
@@ -226,7 +226,7 @@ body.sidebar-open {
     }
 
     .menu-btn {
-        display: block; /* Show on mobile */
+        display: block; 
     }
 
     .menu-btn:hover {
@@ -250,7 +250,7 @@ body.sidebar-open {
     .content {
         margin-left: 0;
         width: 100%;
-        padding-top: 60px; /* Space for menu button */
+        padding-top: 60px; 
     }
 }
 
@@ -260,7 +260,7 @@ body.sidebar-open {
     }
 
     .menu-btn {
-        display: block; /* Ensure menu button is visible */
+        display: block; 
     }
     
     .profile-image {
@@ -1155,7 +1155,6 @@ body.sidebar-open {
     transform: translateY(-2px);
 }
 
-/* Load More Button */
 .load-more-container {
     text-align: center;
     margin-top: 3rem;

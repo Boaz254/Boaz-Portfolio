@@ -3,173 +3,268 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms of Service</title>
+    <title>Terms of Service | Boaz Mittoh</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
     <style>
-        
-        .container {
-            max-width: 800px;
-            margin: 3rem auto;
-            padding: 2.5rem;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
-            line-height: 1.7;
-            color: #34495e;
+        .gradient-bg {
+            background: linear-gradient(135deg, #2c3e50, #1a2634);
         }
-    
-        h1 {
-            color: #2c3e50;
-            font-size: 2.2rem;
-            margin-bottom: 2rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 1rem;
-            padding-bottom: 1rem;
-            border-bottom: 2px solid #f39c12;
-        }
-    
-        .icon {
-            color: #f39c12;
-            font-size: 1.8rem;
-        }
-    
-        h2 {
-            color: #2c3e50;
-            font-size: 1.5rem;
-            margin: 2rem 0 1rem;
+        .highlight {
             position: relative;
-            padding-left: 1.2rem;
+            display: inline-block;
         }
-    
-        h2::before {
+        .highlight::after {
             content: '';
             position: absolute;
+            bottom: -5px;
             left: 0;
-            top: 0.5rem;
-            height: 1.2rem;
-            width: 5px;
+            width: 100%;
+            height: 3px;
             background: #f39c12;
-            border-radius: 3px;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.4s ease;
         }
-    
-        p {
-            margin-bottom: 1.2rem;
-            font-size: 1.05rem;
-        }
-    
-        .back-btn {
-            display: inline-flex;
-            align-items: center;
-            padding: 0.8rem 1.5rem;
-            background: #2c3e50;
-            color: white;
-            border-radius: 6px;
-            text-decoration: none;
-            margin-top: 2rem;
-            transition: all 0.3s ease;
-            font-weight: 500;
-        }
-    
-        .back-btn i {
-            margin-right: 0.7rem;
-            transition: transform 0.3s ease;
-        }
-    
-        .back-btn:hover {
-            background: #f39c12;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(243, 156, 18, 0.3);
-        }
-    
-        .back-btn:hover i {
-            transform: translateX(-3px);
-        }
-    
-        
-        @media (max-width: 768px) {
-            .container {
-                padding: 2rem 1.5rem;
-                margin: 2rem 1rem;
-            }
-            
-            h1 {
-                font-size: 1.8rem;
-                flex-direction: column;
-                gap: 0.5rem;
-            }
-            
-            h2 {
-                font-size: 1.3rem;
-            }
-        }
-    
-        @media (max-width: 480px) {
-            .container {
-                padding: 1.5rem 1.2rem;
-            }
-            
-            h1 {
-                font-size: 1.6rem;
-            }
-            
-            .back-btn {
-                width: 100%;
-                justify-content: center;
-            }
-        }
-    
-        
-        strong {
-            color: #2c3e50;
-            font-weight: 600;
-        }
-    
-        a {
-            color: #f39c12;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-    
-        a:hover {
-            color: #e74c3c;
-            text-decoration: none;
+        .highlight:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
         }
     </style>
 </head>
-<body>
-    
-    <div class="container">
-        <h1><i class="fas fa-file-contract icon"></i> Terms of Service</h1>
-        <p><strong>Last Updated:</strong> April 10, 2025</p>
-        <p>Welcome to my professional portfolio website. By accessing or using this website, you agree to comply with and be bound by the following terms and conditions of service.</p>
-    
-        <h2>1. Acceptance of Terms</h2>
-        <p>Your access to and use of this website constitutes your acceptance of these Terms of Service and your agreement to be bound by them. If you disagree with any part of these terms, please discontinue use of this website.</p>
-    
-        <h2>2. Use of Website</h2>
-        <p>This website serves as my professional portfolio to showcase my skills, services, and projects. You may browse the content for personal and non-commercial purposes. Unauthorized copying, distribution, or modification of any content is strictly prohibited without my express written permission.</p>
-    
-        <h2>3. Intellectual Property Rights</h2>
-        <p>All content on this website, including but not limited to text, graphics, logos, images, and design elements, is my exclusive property unless otherwise stated. This content is protected by copyright and other intellectual property laws. Unauthorized use may result in legal action.</p>
-    
-        <h2>4. Third-Party Links</h2>
-        <p>This website may contain links to third-party websites or services that are not owned or controlled by me. I have no control over, and assume no responsibility for, the content, privacy policies, or practices of any third-party websites or services.</p>
-    
-        <h2>5. Limitation of Liability</h2>
-        <p>Under no circumstances shall I be liable for any direct, indirect, incidental, special, or consequential damages that result from the use of, or the inability to use, this website or any content therein, even if I have been advised of the possibility of such damages.</p>
-    
-        <h2>6. Changes to Terms</h2>
-        <p>I reserve the right to modify or replace these Terms of Service at any time. The most current version will always be posted on this page. Your continued use of the website after any changes constitutes your acceptance of the new terms.</p>
-    
-        <h2>7. Governing Law</h2>
-        <p>These Terms shall be governed by and construed in accordance with the laws of Kenya, without regard to its conflict of law provisions.</p>
-    
-        <a href="/" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Home</a>
+<body class="bg-gray-50 font-sans">
+    <button id="menu-toggle" class="fixed top-4 left-5 text-3xl bg-transparent border-none text-white cursor-pointer z-[1000] md:hidden">
+        ☰
+    </button>
+
+    <div class="flex min-h-screen">
+        <div class="sidebar gradient-bg w-72 h-screen fixed left-0 top-0 flex flex-col py-8 shadow-lg z-50 overflow-y-auto transition-all duration-300 hidden md:block">
+            <div class="flex flex-col items-center px-8 pb-6 mb-4 border-b border-white/10">
+                <img src="{{ url_for('static', filename='images/boaz.jpg') }}" 
+                     alt="Boaz Mittoh" 
+                     class="w-36 h-36 rounded-full object-cover border-4 border-gray-200/80 shadow-lg mb-4 hover:scale-105 hover:border-orange-400 transition-all">
+                <h2 class="text-white text-xl font-semibold mb-1">Boaz Mittoh</h2>
+                <p class="text-orange-400 text-sm">Full Stack Developer</p>
+            </div>
+            
+            <nav class="flex flex-col px-6 mb-auto">
+                <a href="/#about" class="flex items-center py-3 px-4 my-1 text-white rounded-lg hover:bg-white/10 hover:translate-x-1 transition-all">
+                    <i class="fas fa-user-circle text-orange-400 mr-3 w-6 text-center"></i>
+                    <span>About</span>
+                </a>
+                <a href="/#services" class="flex items-center py-3 px-4 my-1 text-white rounded-lg hover:bg-white/10 hover:translate-x-1 transition-all">
+                    <i class="fas fa-briefcase text-blue-400 mr-3 w-6 text-center"></i>
+                    <span>Services</span>
+                </a>
+                <a href="/#projects" class="flex items-center py-3 px-4 my-1 text-white rounded-lg hover:bg-white/10 hover:translate-x-1 transition-all">
+                    <i class="fas fa-folder-open text-red-400 mr-3 w-6 text-center"></i>
+                    <span>Projects</span>
+                </a>
+                <a href="/#contact" class="flex items-center py-3 px-4 my-1 text-white rounded-lg hover:bg-white/10 hover:translate-x-1 transition-all">
+                    <i class="fas fa-envelope text-green-400 mr-3 w-6 text-center"></i>
+                    <span>Contact</span>
+                </a>
+                <a href="/terms" class="flex items-center py-3 px-4 my-1 text-white rounded-lg bg-white/10 translate-x-1">
+                    <i class="fas fa-file-contract text-purple-400 mr-3 w-6 text-center"></i>
+                    <span>Terms</span>
+                </a>
+                <a href="/privacy" class="flex items-center py-3 px-4 my-1 text-white rounded-lg hover:bg-white/10 hover:translate-x-1 transition-all">
+                    <i class="fas fa-shield-alt text-cyan-400 mr-3 w-6 text-center"></i>
+                    <span>Privacy</span>
+                </a>
+            </nav>
+            
+            <div class="px-6 pt-4 border-t border-white/10 mt-auto">
+                <div class="flex justify-center gap-4 mb-6">
+                    <a href="https://linkedin.com/in/boaz-mittoh-136062218" target="_blank" class="w-9 h-9 flex items-center justify-center rounded-full bg-white/10 text-white hover:bg-white/20 hover:-translate-y-1 transition-all">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/yourprofile" target="_blank" class="w-9 h-9 flex items-center justify-center rounded-full bg-white/10 text-white hover:bg-white/20 hover:-translate-y-1 transition-all">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:boazmittoh480@gmail.com" class="w-9 h-9 flex items-center justify-center rounded-full bg-white/10 text-white hover:bg-white/20 hover:-translate-y-1 transition-all">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+                
+                <p class="text-center text-sm text-gray-300 italic mb-4">
+                    "Hard work beats talent when talent fails to work hard!"
+                </p>
+                
+                <p class="text-center text-xs text-gray-400">
+                    &copy; <span id="current-year">2023</span> Boaz Mittoh. All rights reserved.
+                </p>
+            </div>
+        </div>
+
+        <div class="content ml-0 md:ml-72 w-full md:w-[calc(100%-18rem)] p-6 transition-all">
+            <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="gradient-bg text-white p-8 text-center">
+                    <h1 class="text-3xl md:text-4xl font-bold mb-4">Terms of <span class="highlight">Service</span></h1>
+                    <p class="text-orange-300">Last Updated: <span id="current-date"></span></p>
+                </div>
+                <div class="p-8">
+                    <div class="prose max-w-none">
+                        <section class="mb-8">
+                            <h2 class="text-2xl font-semibold text-gray-800 mb-4 flex items-center">
+                                <i class="fas fa-file-signature text-orange-500 mr-3"></i>
+                                Acceptance of Terms
+                            </h2>
+                            <p class="text-gray-600 mb-4">
+                                By accessing or using this portfolio website, you agree to be bound by these Terms of Service. If you disagree with any part of these terms, please discontinue use of this website immediately.
+                            </p>
+                        </section>
+
+                        <section class="mb-8">
+                            <h2 class="text-2xl font-semibold text-gray-800 mb-4 flex items-center">
+                                <i class="fas fa-laptop-code text-blue-500 mr-3"></i>
+                                Website Use
+                            </h2>
+                            <ul class="list-disc pl-6 text-gray-600 space-y-2">
+                                <li>This website serves as my professional portfolio to showcase my skills and services</li>
+                                <li>You may browse content for personal, non-commercial purposes only</li>
+                                <li>Unauthorized copying, distribution, or modification of content is prohibited</li>
+                                <li>You must not use this website in any way that causes damage or impairment</li>
+                            </ul>
+                        </section>
+
+                        <section class="mb-8">
+                            <h2 class="text-2xl font-semibold text-gray-800 mb-4 flex items-center">
+                                <i class="fas fa-copyright text-purple-500 mr-3"></i>
+                                Intellectual Property
+                            </h2>
+                            <p class="text-gray-600 mb-4">
+                                All content on this website, including text, graphics, logos, and design elements, is my exclusive property unless otherwise stated. This content is protected by copyright and other intellectual property laws.
+                            </p>
+                            <ul class="list-disc pl-6 text-gray-600 space-y-2">
+                                <li>No content may be reproduced without express written permission</li>
+                                <li>Project screenshots and descriptions are provided for demonstration purposes only</li>
+                                <li>Unauthorized use may result in legal action</li>
+                            </ul>
+                        </section>
+
+                        <section class="mb-8">
+                            <h2 class="text-2xl font-semibold text-gray-800 mb-4 flex items-center">
+                                <i class="fas fa-external-link-alt text-green-500 mr-3"></i>
+                                Third-Party Links
+                            </h2>
+                            <p class="text-gray-600">
+                                This website may contain links to third-party websites or services that are not owned or controlled by me.
+                            </p>
+                            <ul class="list-disc pl-6 text-gray-600 space-y-2 mt-2">
+                                <li>I have no control over and assume no responsibility for third-party content</li>
+                                <li>Links are provided for convenience only and do not imply endorsement</li>
+                                <li>You access third-party sites at your own risk</li>
+                            </ul>
+                        </section>
+
+                        <section class="mb-8">
+                            <h2 class="text-2xl font-semibold text-gray-800 mb-4 flex items-center">
+                                <i class="fas fa-gavel text-red-500 mr-3"></i>
+                                Limitation of Liability
+                            </h2>
+                            <p class="text-gray-600 mb-2">
+                                Under no circumstances shall I be liable for:
+                            </p>
+                            <ul class="list-disc pl-6 text-gray-600 space-y-2">
+                                <li>Any direct, indirect, or consequential damages resulting from website use</li>
+                                <li>Errors or omissions in content</li>
+                                <li>Interruptions in service or technical issues</li>
+                                <li>Unauthorized access to or alteration of transmissions or data</li>
+                            </ul>
+                        </section>
+
+                        <section class="mb-8">
+                            <h2 class="text-2xl font-semibold text-gray-800 mb-4 flex items-center">
+                                <i class="fas fa-sync-alt text-yellow-500 mr-3"></i>
+                                Changes to Terms
+                            </h2>
+                            <p class="text-gray-600">
+                                I reserve the right to modify these terms at any time. The "Last Updated" date will reflect changes. Your continued use constitutes acceptance of updated terms.
+                            </p>
+                        </section>
+
+                        <section class="mb-8">
+                            <h2 class="text-2xl font-semibold text-gray-800 mb-4 flex items-center">
+                                <i class="fas fa-balance-scale text-cyan-500 mr-3"></i>
+                                Governing Law
+                            </h2>
+                            <p class="text-gray-600">
+                                These Terms shall be governed by Kenyan law. Any disputes shall be resolved in Kenyan courts.
+                            </p>
+                        </section>
+
+                        <section>
+                            <h2 class="text-2xl font-semibold text-gray-800 mb-4 flex items-center">
+                                <i class="fas fa-question-circle text-indigo-500 mr-3"></i>
+                                Contact Information
+                            </h2>
+                            <p class="text-gray-600">
+                                For questions about these Terms, contact me at:
+                                <a href="mailto:boazmittoh480@gmail.com" class="text-blue-500 hover:underline">boazmittoh480@gmail.com</a>
+                            </p>
+                        </section>
+                    </div>
+
+                    <div class="mt-8">
+                        <a href="/" class="inline-flex items-center px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-orange-500 transition-all duration-300">
+                            <i class="fas fa-arrow-left mr-3"></i>
+                            Back to Home
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-   
+    <footer class="bg-gray-800 text-white py-6 mt-8">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex justify-center space-x-6 mb-4">
+                <a href="https://twitter.com/@boaz_mittoh" target="_blank" class="text-gray-300 hover:text-white transition-colors">
+                    <i class="fab fa-x-twitter text-xl"></i>
+                </a>
+                <a href="https://wa.me/254701073857" target="_blank" class="text-gray-300 hover:text-white transition-colors">
+                    <i class="fab fa-whatsapp text-xl"></i>
+                </a>
+                <a href="https://facebook.com/BoazMito" target="_blank" class="text-gray-300 hover:text-white transition-colors">
+                    <i class="fab fa-facebook-f text-xl"></i>
+                </a>
+                <a href="https://linkedin.com/in/boaz-mittoh-136062218" target="_blank" class="text-gray-300 hover:text-white transition-colors">
+                    <i class="fab fa-linkedin-in text-xl"></i>
+                </a>
+                <a href="https://github.com/yourprofile" target="_blank" class="text-gray-300 hover:text-white transition-colors">
+                    <i class="fab fa-github text-xl"></i>
+                </a>
+            </div>
+            <p class="text-gray-400 text-sm">
+                &copy; <span id="footer-year"></span> Boaz Mittoh. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        document.getElementById('footer-year').textContent = new Date().getFullYear();
+        
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        document.getElementById('current-date').textContent = new Date().toLocaleDateString('en-US', options);
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menu-toggle');
+            const sidebar = document.querySelector('.sidebar');
+            
+            menuToggle.addEventListener('click', function() {
+                sidebar.classList.toggle('hidden');
+                sidebar.classList.toggle('block');
+            });
+            
+            document.addEventListener('click', function(event) {
+                if (!sidebar.contains(event.target) && event.target !== menuToggle) {
+                    sidebar.classList.add('hidden');
+                    sidebar.classList.remove('block');
+                }
+            });
+        });
+    </script>
 </body>
 </html>

@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy | Boaz Mittoh</title>
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome -->
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
         .gradient-bg {
@@ -35,15 +34,14 @@
     </style>
 </head>
 <body class="bg-gray-50 font-sans">
-    <!-- Navigation Button (matches your index.html) -->
     <button id="menu-toggle" class="fixed top-4 left-5 text-3xl bg-transparent border-none text-white cursor-pointer z-[1000] md:hidden">
         ☰
     </button>
 
     <div class="flex min-h-screen">
-        <!-- Sidebar (matches your existing sidebar) -->
+       
         <div class="sidebar gradient-bg w-72 h-screen fixed left-0 top-0 flex flex-col py-8 shadow-lg z-50 overflow-y-auto transition-all duration-300 hidden md:block">
-            <!-- Your existing sidebar content -->
+            
             <div class="flex flex-col items-center px-8 pb-6 mb-4 border-b border-white/10">
                 <img src="{{ url_for('static', filename='images/boaz.jpg') }}" 
                      alt="Boaz Mittoh" 
@@ -102,16 +100,16 @@
             </div>
         </div>
 
-        <!-- Main Content -->
+        
         <div class="content ml-0 md:ml-72 w-full md:w-[calc(100%-18rem)] p-6 transition-all">
             <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
-                <!-- Header Section -->
+              
                 <div class="gradient-bg text-white p-8 text-center">
                     <h1 class="text-3xl md:text-4xl font-bold mb-4">Privacy <span class="highlight">Policy</span></h1>
                     <p class="text-orange-300">Last Updated: <span id="current-date"></span></p>
                 </div>
 
-                <!-- Privacy Content -->
+                
                 <div class="p-8">
                     <div class="prose max-w-none">
                         <section class="mb-8">
@@ -212,7 +210,6 @@
         </div>
     </div>
 
-    <!-- Footer -->
     <footer class="bg-gray-800 text-white py-6 mt-8">
         <div class="container mx-auto px-6 text-center">
             <div class="flex justify-center space-x-6 mb-4">
@@ -239,15 +236,12 @@
     </footer>
 
     <script>
-        // Set current year
         document.getElementById('current-year').textContent = new Date().getFullYear();
         document.getElementById('footer-year').textContent = new Date().getFullYear();
         
-        // Set current date in format: Month Day, Year
         const options = { year: 'numeric', month: 'long', day: 'numeric' };
         document.getElementById('current-date').textContent = new Date().toLocaleDateString('en-US', options);
-        
-        // Mobile menu toggle (matches your existing functionality)
+
         document.addEventListener('DOMContentLoaded', function() {
             const menuToggle = document.getElementById('menu-toggle');
             const sidebar = document.querySelector('.sidebar');
@@ -257,7 +251,6 @@
                 sidebar.classList.toggle('block');
             });
             
-            // Close sidebar when clicking outside
             document.addEventListener('click', function(event) {
                 if (!sidebar.contains(event.target) && event.target !== menuToggle) {
                     sidebar.classList.add('hidden');
