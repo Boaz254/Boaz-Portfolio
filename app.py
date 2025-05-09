@@ -1,9 +1,11 @@
 from flask import *
 from flask_mail import Mail, Message
+import os
+from dotenv import load_dotenv
 
+load_dotenv()
 app = Flask(__name__)
-
-app.secret_key = "boaz" 
+app.secret_key = os.getenv('SECRET_KEY') 
 
 services_info = {
     "tax-administration": """
@@ -275,7 +277,7 @@ def home():
 
 @app.route("/service/<service_name>")
 def service(service_name):
-    # Return the service details based on the service clicked
+    
     service_detail = services_info.get(service_name, "<p>Details not available for this service.</p>")
     return render_template("service_detail.html", service_detail=service_detail)
 
@@ -283,26 +285,30 @@ def service(service_name):
 def terms():
     return render_template('terms.html')
 
+@app.route('/privacy')
+def privacy():
+    return render_template('privacy.html')
 
-# Email Configuration (Gmail Example)
-app.config['MAIL_SERVER'] = 'smtp.gmail.com'
-app.config['MAIL_PORT'] = 587
-app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USE_SSL'] = False
-app.config['MAIL_USERNAME'] = "boazmittoh480@gmail.com"  # Your Email
-app.config['MAIL_PASSWORD'] = "dsymensuyapqnsia"  
-app.config['MAIL_DEFAULT_SENDER'] = "boazmittoh480@gmail.com"
 
-mail = Mail(app)  # Initialize Flask-Mail
+
+app.config['MAIL_SERVER'] = os.getenv('MAIL_SERVER')
+app.config['MAIL_PORT'] = int(os.getenv('MAIL_PORT'))
+app.config['MAIL_USE_TLS'] = os.getenv('MAIL_USE_TLS') == 'True'
+app.config['MAIL_USE_SSL'] = os.getenv('MAIL_USE_SSL') == 'True'
+app.config['MAIL_USERNAME'] = os.getenv('MAIL_USERNAME')
+app.config['MAIL_PASSWORD'] = os.getenv('MAIL_PASSWORD')
+app.config['MAIL_DEFAULT_SENDER'] = os.getenv('MAIL_DEFAULT_SENDER')
+
+mail = Mail(app)
 
 @app.route('/send_message', methods=['POST'])
 def send_message():
     name = request.form.get('name')
     email = request.form.get('email')
-    subject = request.form.get('subject', 'No Subject')  # Default value if not provided
+    subject = request.form.get('subject', 'No Subject')  
     message_body = request.form.get('message')
 
-    # Validate required fields
+    
     if not name or not email or not message_body:
         flash("Name, email, and message are required!", "danger")
         return redirect('/#contact')

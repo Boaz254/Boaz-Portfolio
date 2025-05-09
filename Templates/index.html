@@ -12,24 +12,11 @@
       <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <style>
 
-.menu-btn {
-    position: fixed;
-    top: 15px;
-    left: 20px;
-    font-size: 30px;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-    z-index: 1000;
-}
-
-    </style>
 </head>
 <body>
     <button id="menu-toggle" class="menu-btn">☰</button>
+    <div class="content-overlay"></div>
 
     <div class="sidebar">
         
@@ -79,6 +66,9 @@
             
             <div class="legal-links">
                 <a href="{{ url_for('terms') }}">Terms of Service</a>
+                <span class="separator">|</span>
+                <a href="{{ url_for('privacy') }}">Privacy Policy</a>
+
                 
             </div>
             
@@ -102,7 +92,7 @@
                     <span class="name">I'm Boaz Mittoh</span>
                 </h1>
                 <div class="typewriter-container">
-                    <p class="hero-subtitle">Web Developer | Data Analyst | Tax Administrator</p>
+                    <p class="hero-subtitle">Full Stack Developer | Data Analyst | Tax Administrator</p>
                 </div>
                 <div class="hero-buttons">
                     <a href="#about" class="btn btn-primary">
@@ -198,14 +188,18 @@
                 </div>
                 
                 <div class="skills-grid">
+                    <!-- Web Development -->
                     <div class="skill-category">
                         <h3 class="category-title">
-                            <i class="fas fa-laptop-code category-icon"></i>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/chrome/chrome-original.svg" class="category-icon" alt="Web Dev" width="24" height="24">
                             Web Development
                         </h3>
                         <div class="skill-item">
                             <div class="skill-info">
-                                <span>HTML/CSS</span>
+                                <span>
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="skill-icon" alt="HTML5" width="20" height="20">
+                                    HTML5
+                                </span>
                                 <span>100%</span>
                             </div>
                             <div class="progress-bar">
@@ -214,7 +208,38 @@
                         </div>
                         <div class="skill-item">
                             <div class="skill-info">
-                                <span>JavaScript</span>
+                                <span>
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="skill-icon" alt="CSS3" width="20" height="20">
+                                    CSS3
+                                </span>
+                                <span>100%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 100%; background-color: #264de4;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" 
+                                         class="skill-icon" 
+                                         alt="Tailwind CSS"
+                                         width="20"
+                                         height="20">
+                                    Tailwind CSS
+                                </span>
+                                <span>100%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 100%; background-color: #06b6d4;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="skill-icon" alt="JavaScript" width="20" height="20">
+                                    JavaScript
+                                </span>
                                 <span>90%</span>
                             </div>
                             <div class="progress-bar">
@@ -223,23 +248,74 @@
                         </div>
                         <div class="skill-item">
                             <div class="skill-info">
-                                <span>Python/Flask</span>
+                                <span>
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" class="skill-icon" alt="React" width="20" height="20">
+                                    React.js
+                                </span>
+                                <span>85%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 85%; background-color: #61dafb;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Backend Development -->
+                    <div class="skill-category">
+                        <h3 class="category-title">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" class="category-icon" alt="Backend" width="24" height="24">
+                            Backend Development
+                        </h3>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="skill-icon" alt="Python" width="20" height="20">
+                                    Python
+                                </span>
                                 <span>90%</span>
                             </div>
                             <div class="progress-bar">
                                 <div class="progress-fill" style="width: 90%; background-color: #3776ab;"></div>
                             </div>
                         </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" class="skill-icon" alt="Flask" width="20" height="20">
+                                    Flask
+                                </span>
+                                <span>85%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 85%; background-color: #000000;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" class="skill-icon" alt="Node.js" width="20" height="20">
+                                    Node.js
+                                </span>
+                                <span>80%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 80%; background-color: #68a063;"></div>
+                            </div>
+                        </div>
                     </div>
                     
+                    <!-- Database & Data -->
                     <div class="skill-category">
                         <h3 class="category-title">
                             <i class="fas fa-database category-icon"></i>
-                            Data Management
+                            Database & Data
                         </h3>
                         <div class="skill-item">
                             <div class="skill-info">
-                                <span>MySQL</span>
+                                <span>
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" class="skill-icon" alt="MySQL" width="20" height="20">
+                                    MySQL
+                                </span>
                                 <span>100%</span>
                             </div>
                             <div class="progress-bar">
@@ -248,7 +324,22 @@
                         </div>
                         <div class="skill-item">
                             <div class="skill-info">
-                                <span>Data Analysis</span>
+                                <span>
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" class="skill-icon" alt="MongoDB" width="20" height="20">
+                                    MongoDB
+                                </span>
+                                <span>85%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 85%; background-color: #4db33d;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" class="skill-icon" alt="Data Analysis" width="20" height="20">
+                                    Data Analysis
+                                </span>
                                 <span>90%</span>
                             </div>
                             <div class="progress-bar">
@@ -257,45 +348,14 @@
                         </div>
                         <div class="skill-item">
                             <div class="skill-info">
-                                <span>Excel</span>
+                                <span>
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" class="skill-icon" alt="Excel" width="20" height="20">
+                                    Excel
+                                </span>
                                 <span>100%</span>
                             </div>
                             <div class="progress-bar">
                                 <div class="progress-fill" style="width: 100%; background-color: #217346;"></div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-category">
-                        <h3 class="category-title">
-                            <i class="fas fa-network-wired category-icon"></i>
-                            IT Infrastructure
-                        </h3>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span>Network Administration</span>
-                                <span>100%</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress-fill" style="width: 100%; background-color: #3498db;"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span>System Troubleshooting</span>
-                                <span>100%</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress-fill" style="width: 100%; background-color: #9b59b6;"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span>CRM Systems</span>
-                                <span>90%</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress-fill" style="width: 90%; background-color: #e74c3c;"></div>
                             </div>
                         </div>
                     </div>
@@ -313,10 +373,10 @@
                 </div>
                 
                 <div class="projects-grid">
-                    
+                    <!-- Online Food Store -->
                     <div class="project-card">
                         <div class="project-icon food-icon">
-                            <i class="fas fa-store"></i>
+                            <img src="{{ url_for('static', filename='images/project-logos/Preview.png') }}" alt="Online Food Store" class="project-logo">
                         </div>
                         <div class="project-content">
                             <h3 class="project-title">Online Food Store</h3>
@@ -337,10 +397,10 @@
                         </div>
                     </div>
                     
-                   
+                    <!-- SmartFish E-commerce -->
                     <div class="project-card">
                         <div class="project-icon fish-icon">
-                            <i class="fas fa-fish"></i>
+                            <img src="{{ url_for('static', filename='images/project-logos/fish-store-logo.png') }}" alt="SmartFish E-commerce" class="project-logo">
                         </div>
                         <div class="project-content">
                             <h3 class="project-title">SmartFish E-commerce</h3>
@@ -361,10 +421,10 @@
                         </div>
                     </div>
                     
-                    
+                    <!-- School Management System -->
                     <div class="project-card">
                         <div class="project-icon school-icon">
-                            <i class="fas fa-school"></i>
+                            <img src="{{ url_for('static', filename='images/project-logos/school-logo.png') }}" alt="School Management System" class="project-logo">
                         </div>
                         <div class="project-content">
                             <h3 class="project-title">XYZ School Management System</h3>
@@ -385,10 +445,10 @@
                         </div>
                     </div>
                     
-                    
+                    <!-- Club Management System -->
                     <div class="project-card">
                         <div class="project-icon club-icon">
-                            <i class="fas fa-users"></i>
+                            <img src="{{ url_for('static', filename='images/project-logos/club-logo.png') }}" alt="Club Management System" class="project-logo">
                         </div>
                         <div class="project-content">
                             <h3 class="project-title">Modern Club Management System</h3>
@@ -710,30 +770,30 @@
             const sidebar = document.querySelector('.sidebar');
             const content = document.querySelector('.content');
             const body = document.body;
-            const sidebarCloseBtn = document.querySelector('.sidebar-close-btn'); 
             
-            // Toggle sidebar with menu button
-            menuToggle.addEventListener('click', function() {
+            // Toggle sidebar on menu button click
+            menuToggle.addEventListener('click', function(e) {
+                e.stopPropagation(); 
                 sidebar.classList.toggle('active');
-                body.classList.toggle('sidebar-active');
+                body.classList.toggle('sidebar-open');
             });
             
-            // Close sidebar with close button
-            if (sidebarCloseBtn) {
-                sidebarCloseBtn.addEventListener('click', function() {
-                    sidebar.classList.remove('active');
-                    body.classList.remove('sidebar-active');
-                });
-            }
-            
-            // Close sidebar when clicking on content
+            // Close sidebar when clicking outside
             content.addEventListener('click', function() {
                 if (sidebar.classList.contains('active')) {
                     sidebar.classList.remove('active');
-                    body.classList.remove('sidebar-active');
+                    body.classList.remove('sidebar-open');
                 }
             });
-    
+            
+            // Close sidebar with escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && sidebar.classList.contains('active')) {
+                    sidebar.classList.remove('active');
+                    body.classList.remove('sidebar-open');
+                }
+            });
+            
             // Update copyright year
             document.getElementById('current-year').textContent = new Date().getFullYear();
         });
