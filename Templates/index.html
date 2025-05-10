@@ -48,7 +48,7 @@
         
         <div class="sidebar-footer">
             <div class="social-links">
-                <a href="https://github.com/yourprofile" target="_blank" class="social-link" aria-label="GitHub">
+                <a href="https://github.com/Boaz254" target="_blank" class="social-link" aria-label="GitHub">
                     <i class="fab fa-github"></i>
                 </a>
                 <a href="https://linkedin.com/in/boaz-mittoh-136062218" target="_blank" class="social-link" aria-label="LinkedIn">
@@ -371,13 +371,18 @@
                 <div class="projects-grid">
                     <div class="project-card">
                         <div class="project-icon food-icon">
-                            <img src="{{ url_for('static', filename='images/project-logos/Preview.png') }}" alt="Online Food Store" class="project-logo">
+                            <img 
+                                src="{{ url_for('static', filename='images/project-logos/Preview.png') }}" 
+                                alt="Online Food Store" 
+                                class="project-bg-img"
+                            >
                         </div>
                         <div class="project-content">
                             <h3 class="project-title">Online Food Store</h3>
                             <p class="project-description">A full-featured e-commerce platform with user authentication, shopping cart functionality, and M-Pesa payment integration.</p>
                             <div class="project-tech">
                                 <span class="tech-tag">Flask</span>
+                                <span class="tech-tag">JavaScript</span>
                                 <span class="tech-tag">MySQL</span>
                                 <span class="tech-tag">M-Pesa API</span>
                             </div>
@@ -393,16 +398,22 @@
                     </div>
 
                     <div class="project-card">
-                        <div class="project-icon fish-icon">
-                            <img src="{{ url_for('static', filename='images/project-logos/fish-store-logo.png') }}" alt="SmartFish E-commerce" class="project-logo">
+                        <div class="project-icon food-icon">
+                            <img 
+                                src="{{ url_for('static', filename='images/project-logos/Preview1.png') }}" 
+                                alt="Online Food Store" 
+                                class="project-bg-img"
+                            >
                         </div>
                         <div class="project-content">
                             <h3 class="project-title">SmartFish E-commerce</h3>
                             <p class="project-description">Specialized marketplace for fish products with vendor management, product listings, and admin dashboard.</p>
                             <div class="project-tech">
                                 <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Flask</span>
                                 <span class="tech-tag">JavaScript</span>
                                 <span class="tech-tag">Bootstrap</span>
+                                <span class="tech-tag">M-Pesa API</span>
                             </div>
                         </div>
                         <div class="project-actions">
@@ -416,8 +427,12 @@
                     </div>
                     
                     <div class="project-card">
-                        <div class="project-icon school-icon">
-                            <img src="{{ url_for('static', filename='images/project-logos/school-logo.png') }}" alt="School Management System" class="project-logo">
+                        <div class="project-icon food-icon">
+                            <img 
+                                src="{{ url_for('static', filename='images/project-logos/') }}" 
+                                alt="School Management System" 
+                                class="project-bg-img"
+                            >
                         </div>
                         <div class="project-content">
                             <h3 class="project-title">XYZ School Management System</h3>
@@ -439,8 +454,12 @@
                     </div>
 
                     <div class="project-card">
-                        <div class="project-icon club-icon">
-                            <img src="{{ url_for('static', filename='images/project-logos/club-logo.png') }}" alt="Club Management System" class="project-logo">
+                        <div class="project-icon food-icon">
+                            <img 
+                                src="{{ url_for('static', filename='images/project-logos/') }}" 
+                                alt="Club Management System" 
+                                class="project-bg-img"
+                            >
                         </div>
                         <div class="project-content">
                             <h3 class="project-title">Modern Club Management System</h3>
@@ -448,6 +467,9 @@
                             <div class="project-tech">
                                 <span class="tech-tag">Python</span>
                                 <span class="tech-tag">HTML/CSS</span>
+                                <span class="tech-tag">SQLAlchemy</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Flask</span>
                                 <span class="tech-tag">Stripe API</span>
                             </div>
                         </div>
@@ -463,10 +485,9 @@
                 </div>
                 
                 <div class="load-more-container">
-                    <button id="load-more" class="load-more-btn">
-                        <span>Load More Projects</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
+                    <a href="https://github.com/Boaz254" id="load-more" class="load-more-btn" aria-label="GitHub">
+                        <span>View More Projects</span>
+                    </a>
                 </div>
             </div>
         </section>
