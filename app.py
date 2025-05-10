@@ -273,7 +273,7 @@ services_info = {
 
 @app.route('/')
 def home():
-    return render_template('index.html' , services=services_info)
+    return render_template('Template.html' , services=services_info)
 
 @app.route("/service/<service_name>")
 def service(service_name):
