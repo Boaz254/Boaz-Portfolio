@@ -273,7 +273,7 @@ services_info = {
 
 @app.route('/')
 def home():
-    return render_template('Template.html' , services=services_info)
+    return render_template('template.html' , services=services_info)
 
 @app.route("/service/<service_name>")
 def service(service_name):
@@ -332,4 +332,4 @@ def send_message():
 
 
 if __name__ == '__main__':
-    app.run(debug=True, port=4000)
+    app.run(debug=False, port=4000)
